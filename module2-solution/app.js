@@ -10,10 +10,7 @@
  function ToBuyController(ShoppingListCheckoffService) {
    var toBuy = this;
 
-   //toBuy.shouldShowMessage = ShoppingListCheckoffService.showMessage();
-   //toBuy.displayMessage = "Everything is bought!";
    toBuy.toBuyList = ShoppingListCheckoffService.getToBuyList();
-   toBuy.toBuyListLength = ShoppingListCheckoffService.getBuyListLength();
 
    toBuy.buyItem =  function(name, quantity)
     {
@@ -37,19 +34,13 @@
      var service = this;
 
      //list of service
-     var toBuyList = [{name:"Cookies",quantity:3}, {name:"Chips",quantity:2}];
+     var toBuyList = [{name:"Cookies",quantity:3}, {name:"Chips",quantity:2}, {name:"Chicken",quantity:6}, {name:"Carrots",quantity:7}, {name:"Bananas",quantity:4}];
      var boughtList = [];
 
      service.getToBuyList = function()
      {
        return toBuyList;
      }
-
-     service.getBuyListLength = function()
-     {
-       return toBuyList.length;
-     }
-
 
      service.getBoughtList = function()
      {
